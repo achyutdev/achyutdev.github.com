@@ -8,5 +8,6 @@ tagline: Supporting tagline
 <br/>
 <br/>
 <br/>
-
-<h1 align="center" style="color: red">This page is under construction.</h1>
+<div align="center">
+	<img src="page_is_under_construction.jpg">
+</div>
