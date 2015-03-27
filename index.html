@@ -1,23 +1,144 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Achyut Dev</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="css/prism.css" rel="stylesheet" />
+  <link href="css/stylesheet.css" rel="stylesheet">
+</head>
 
-<div class="home">
+<body>
+<nav class="navbar navbar-inverse navbar-static-top  no-margin navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+		Achyut Dev
+		<!-- <img alt="Brand" src="..."> -->
+      </a>
+    </div>
 
-  <h1 class="page-heading">Posts</h1>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#contact">Contact</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">Telephony</a></li>
+	            <li><a href="#">Robotics</a></li>
+	            <li><a href="#">Photography</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Old stuff</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<!-- slide -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner " role="listbox">
+    <div class="item active">
+      <img src="images/Home_slide.jpg" alt="Home">
+      <div class="carousel-caption">
+      
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/Home_slide1.jpg" alt="HOME">
+      <div class="carousel-caption">
+	    <h3>Heading</h3>
+	    <p>This is what i want</p>
+	  </div>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+     <div class="item">
+      <img src="images/Home_slide2.jpg" alt="HOME">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+  </div>
 
-</div>
+  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+	<!-- Contact section  -->
+	    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center">Contact</h2>
+                <p class="intro  text-center">I work on telephone Application.<br />Feel free to get in touch if you have any questions or suggestions.</p>
+                <div class="author-message">                      
+                    <div class="profile">
+                        <img class="img-responsive" src="images/Achyut.jpg" alt="" />
+                    </div><!--//profile-->
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">What kind of telephony solution are you looking for?</h3>
+                        <p>I have been working in the field of telephony for last couple of years. Planning, designing and coding of creative applicable telephone system is my job. Where <a href="#">asterisk</a>,Freeswitch,<a href="#">adhearsion</a> are my some tools.</p>
+                        <p>If you like what I do, you can follow me on twitter and I will keep you informed about my work :). I tweet about #asterisk and #voip related resources/content at <a href="#" target="_blank">@jpt</a></p>
+                        <div class="source">
+                            <span class="name"><a href="index.html">Achyut Devkota</a></span>
+                            <br />
+                            <span class="title">System Engineer / Voice Application Architect</span>
+                        </div><!--//source-->
+                    </div><!--//speech-bubble-->                        
+                </div><!--//author-message-->
+
+                <div class="clearfix"></div>
+                <div class="info text-center">
+                    <h4 class="sub-title">Get Connected</h4>
+                    <ul class="social-icons list-inline">
+                        <li><a href="https://twitter.com/AchyutDev" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/achyut.dev" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://np.linkedin.com/pub/achyut-devkota/64/288/701"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://instagram.com/achyutdev/"  target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://github.com/achyutdev"  target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                        <li><a href="https://plus.google.com/+Achyutdev"  target="_blank"><i class="fa fa-google-plus"></i></a></li>   
+                        <li class="last"><a href="http://www.slideshare.net/AchyutDevkota"  target="_blank"><i class="fa fa-slideshare"></i></a></li>              
+                    </ul>
+                </div><!--//info-->
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+
+        <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Designed by Achyut Devkota 2015</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/custom-jquery.js"></script>
+</body>
+</html>
