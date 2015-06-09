@@ -5,11 +5,14 @@
   padding: 0px;
 }
 
-.navbar-inverse{
+.nav-background-no{
   background: none;
   border:  none;
 }
-
+.nav-background-yes{
+  background: #77A836;
+  border:  none;
+}
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav>li>a {
   color: #fff;
