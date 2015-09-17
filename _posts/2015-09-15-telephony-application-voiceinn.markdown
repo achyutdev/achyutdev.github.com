@@ -3,7 +3,7 @@ layout:     post
 category: 	blog
 title:      "A Telephone Application-VoiceInn and Its architecture"
 subtitle:   "Interactive telephone application with user friendly UI"
-date:       2014-06-10 12:00:00
+date:       2015-09-16 12:00:00
 author:     "Achyut Devkota"
 header-img: "images/voiceinn_cover.png"
 tags:		[telephony,asterisk,adhearsion,ivr,sip]
