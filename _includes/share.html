@@ -1,0 +1,12 @@
+<div class="row social-center">
+		<!-- Twitter -->
+	<a href="https://twitter.com/intent/tweet?text={{page.title}} {{ page.url | prepend: site.url}}  {% for tag in page.tags %}%23{{tag}} {% endfor %}" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+ 	<!-- Facebook -->
+	<a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url}}" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+	<!-- Google+ -->
+	<a href="https://plus.google.com/share?url={{ page.url | prepend: site.url}}" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i> Google+</a>
+	<!-- StumbleUpon -->
+	<!-- <a href="http://www.stumbleupon.com/submit?url=" title="Share on StumbleUpon" target="_blank" data-placement="top" class="btn btn-stumbleupon"><i class="fa fa-stumbleupon"></i> Stumbleupon</a> -->
+	<!-- LinkedIn --> 
+	<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ page.url | prepend: site.url}}&title={{page.title}}&summary={{ page.subtitle }}" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+</div>
