@@ -6,6 +6,7 @@ subtitle:   "Interactive telephone application with user friendly UI"
 date:       2014-06-10 12:00:00
 author:     "Achyut Devkota"
 header-img: "images/voiceinn_cover.png"
+tags:		[telephony,asterisk,adhearsion,ivr,sip]
 ---
 
 VoiceInn is an internal project of [YoungInnovations](http://www.younginnovations.com.np/) to provide an interactive telephony service with user friendly web interface. It includes three main telephony services - Vsurvey, Vboard and Vsupport. The modular feature of VoiceInn allows client to take service they need and also provide a customizable feature as required.
