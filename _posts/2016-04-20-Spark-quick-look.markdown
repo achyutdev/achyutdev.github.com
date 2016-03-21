@@ -14,7 +14,8 @@ There are different custom scripting tools to handle data. Still Why we need a f
 ![Spark logo](/images/spark/spark-logo-image.png)
 
 Which speeds up the big data processing as compared to single machine algorithm.  This worked for a while but it has multiple of difficulties - Algorithm complexity, long running batch jobs, disk oriented. Then Apache interduces Spark to solve those difficulties. 
-<!--more-->
+
+
 Spark uses a lot of optimization in same Hadoop computation against the fraction of the resources while still another magnitude faster. It sets new record in file sorting benchmark in 2014.
 ![Code length dia](/images/spark/spark-plot.png)
 Hadoop MapReduce used 2100 machines and took 72 minutes. This means that Spark sorted the same data 3X faster using 10X fewer machines. All the sorting took place on disk (HDFS), without using Spark’s in-memory cache. [1]
