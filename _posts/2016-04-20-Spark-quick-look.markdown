@@ -58,7 +58,7 @@ Spark come with the shell that can run the interactive query. Spark shell is sam
 
 Start with typing
 
-```sh
+```
 $ Spark-shell
  ```
 
@@ -138,7 +138,8 @@ All spark applications are managed via central point called Driver. The driver i
  
 In the previous example of word count using spark-shell, the file was read by spark context(sc). The standalone application sc must be defined first before its implementation.
 
-<pre><code>import org.apache.spark.SparkContext
+```scala 
+import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 object WordCounter {
 	def main(args: Array[String]){
@@ -152,7 +153,9 @@ object WordCounter {
 		sortedCounts.saveAsTextFile("file:///mydata/ReadmeWordCountViaApp")
 	}
 }
-</code></pre>
+
+```
+
 First line inside of the main method create an object of SparkConf and is passed to Spark Context. The object should be full setup before passing to context. Once it passes to context then it became immutable with regard to that context.  Any change with original config Object will have no effect on the application. 
 
 
