@@ -66,7 +66,7 @@ $ Spark-shell
 
  **The word count of README.md file of spark package using spark shell.**
 
-```sh
+```
  Scala> val textFile = sc.textFile(file:///Spark/README.md)
 ```
 
