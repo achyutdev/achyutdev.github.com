@@ -58,15 +58,15 @@ Spark come with the shell that can run the interactive query. Spark shell is sam
 
 Start with typing
 
-```
+```sh
 $ Spark-shell
- ```
+```
 
  When it runs by `spark-shell` commend. Shell automatically added two contexts for you, `sc` and `sqlContext`. Where sqlContex is for spark SQL library and sc is Spark context. SC is the main starting point for spark application.
 
  **The word count of README.md file of spark package using spark shell.**
 
- ```
+ ```sh
  Scala> val textFile = sc.textFile(file:///Spark/README.md)
  ```
 
@@ -78,7 +78,7 @@ The result is in the form of RDD. Most basic abstraction of spark. It is called 
 
 We just tell the spark to load the file. Spark core operation is split into two categories – transformation and action. Transformation is lazily evaluated only storing the instant. Until action will execute the result are actually computed. It can be done by executing the first method.
 
-```
+```sh
 Scala> textFile.first
 ```
 
@@ -88,7 +88,7 @@ This action retrieves the first line of text file.  This shows readme text file 
 
 Next step to map each line of the file, splitting into an array of space delimited word. And floating resultant sequence of string array into a single long sequence. 
 
-```
+```sh
 Scala> val arrangedFileDatasSet = textFile.flatMap(line => line.split(“”)) 
 ```
 
@@ -96,7 +96,7 @@ Scala> val arrangedFileDatasSet = textFile.flatMap(line => line.split(“”))
 
 Now we have new RDD which is long sequence of an array of words. It should be setup out sequence for counting each word into a key value pair. Where word is key and value is count. 
 
-```
+```sh
 val countPrep = arrangedFileDataSet.map(word => (word,1))
 ```
 
@@ -104,7 +104,7 @@ val countPrep = arrangedFileDataSet.map(word => (word,1))
 
 With the data prepared in key value format now we can reduce the value down to the single count for each key. Adding up all the ones in each word basket.
 
-```
+```sh
 val counts = countPrep.reduceByKey((accumValue,newValue) => accumValue+ newValue)
 ```
 
@@ -112,7 +112,7 @@ val counts = countPrep.reduceByKey((accumValue,newValue) => accumValue+ newValue
 
 Again sort the word count lists.
 
-``` 
+```sh 
 val sortedCounts = counts.sortBy(kvPair =>kvPair._2, false)
 ```
 
@@ -124,7 +124,7 @@ All of the above processes are chaining of the transformation of data. So the la
 
 Finally, the code to save our work in a file. 
 
-```
+```sh
 sortedCounts.saveAsTextFile(“file://myData/ReadMeWordCount”)
 ```
 
