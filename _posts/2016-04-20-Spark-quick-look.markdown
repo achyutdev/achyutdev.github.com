@@ -22,14 +22,14 @@ Hadoop MapReduce used 2100 machines and took 72 minutes. This means that Spark s
 There is another important thing - Big Data means big code. Spark only require a lot less core count compare to MapReduce. Spark generalize abstraction and provide more tiny code which increases readability, expressive code, fast, testability, Interactive, Fault tolerant, unify big data.
 This introduction gives the overview of why spark comes into the light even though there is Hadoop project from Apache.
 
-###History of spark
+<h3>History of spark</h3>
 First public paper on MapReduce was released in 2004. That lead to the birth of the Hadoop in 2006 at yahoo. That the beginning of modern big data computation. 
 
 In 2009, Spark was originally developed at the University of California, Berkeley's AMPLab. This was actually a Ph.D. paper [“spark cluster computing with working sets” University of California, Berkeley link ] of Matei Zahari which is released in June 2010. Same year made project open source under BSD licenses. The project became to get ground while being incubated in Berkeley AMPLab. In 2013, Matei Zahari and groups of programmer started data brick. The Spark codebase was donated to the Apache Software Foundation that has maintained it since. Spark changed its licensing to Apache 2.0. 
  
 Since then, It’s become Apache top level project. Its braked the record of data sorting in 2014. Still it is one of the active big data projects which continues to grow in the big data world. More than 500 companies are using it in 2015. It generalized abstraction and growing helping library result to use spark vast number of uses – such as Pandora real time recommendation system. Companies like Yahoo, Comcast, Ooyala, convivial, Netflix, eBay (for log analysis), twitter (graph analysis of social network), home Janelia (analyzing brain pattern in real time). It uses only be limited in the extent of your imagination.
 
-###Programming Model
+<h3>Programming Model</h3>
 
 First few years of MapReduce release lead to Hadoop which leaps the big data. Many companies start using it. Later it is realized that mapReduce is restricted in design with a narrow focus. Specifically, batch procession. This over-specification leads to an explosion of specified library  each adding new API to juggle data model. 
 
@@ -40,25 +40,25 @@ Spark  aims a unified platform for big data. And all these features originate fr
 
 It is an open source and public available its code in Github. The core of spark is maintaining by a lot of programmer including its creator Matei Zaharia. Scalable other refined library builds on the top of the core API.
 
-###Resilient Distributed Dataset (RDD)
+<h3>Resilient Distributed Dataset (RDD)</h3>
 These are the collection of elements partitioned across the node of the cluster that can be operated on in parallel. It is an interface designed that makes it seems like any other collections, though. From this, the work is distributed across the cluster of the machine. So that computation against it run in parallel by reducing time in order of magnitude. This mechanism ensures that if one machine fails rest of the machines continue to work. Instead of executing those function immediately, the instructions are stored for later used which refer as Directed Acyclic Graph (DAG). This graph of instructions continues to grow through the series of call transformation such as map, filter … Another number of lazy operation. DAG are passed to each worker nodes and each not has information of best way to recover while any node is false. Still action has not done. Actions which execute the task against the data. Actions have collected, count, reduce … methods. 
 
 RDD is distributed across the cluster and executed in a parallel. Spark context task is transfer to each worker node and execute task individually as quickly as they can. Once all the node completed their task, then next stage of DAG will be triggered and repeated until all the graph has been completed. 
 
 
 
-##Implementation
+<h3>Implementation</h3>
 
-####Language Support
+<h4>Language Support</h4>
 More than one language support spark. Most compatible is scala because spark itself written in scala. Compatible to java, also support python (some feature does not support), In 1.4 and later release spark even support R programming language.
 
-####Hello World
+<h4>Hello World</h4>
 
 Spark come with the shell that can run the interactive query. Spark shell is same as regularly scala application interactive shell except some minor modification. That how a spark could bring interactive query in big data.
 
 Start with typing
 
-```
+```sh
 $ Spark-shell
  ```
 

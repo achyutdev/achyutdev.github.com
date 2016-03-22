@@ -15,8 +15,7 @@ VoiceInn is an internal project of [YoungInnovations](http://www.younginnovation
 Normally telephone service with IVR supports incoming call only but VoiceInn provides inbound as well as outbound call IVR. Outbound call can be set immediately as well as can be scheduled to a single or multiple numbers at once. 
 <!--more-->
 Any changes made by client after login  will take instant effect in telephone application after it is saved.
-
-###Services
+<h3>Services</h3>
 **Vsurvey** *- is a voice survey unlike normal survey in form.*
 
 ![Vsurvey service](/images/voiceinn/vsurvey.jpg)
@@ -35,10 +34,10 @@ Clients can broadcast noticeboard by recording from phone or uploading audio fil
 
 Users call to a support number and record complaints/ queries. For those who want to get instant support there is a live operator forward option. If first operator needs help to solve users’ complains, s/he can add other individuals and can make it as conference call or s/he can simply forward the call to other relevant numbers. All queries and complains appear in support dashboard for further followups.
 
-###VoiceInn Components
+<h3>VoiceInn Components</h3>
 Asterisk, adhearsion and flask are the major components used to build VoiceInn. Asterisk, is a communication server, handles all kinds of telephone functionalities whereas  adhearsion, is a telephone application framework,  that control calls dialplan. Flask, a web microframework build in python, is used to make user interface.
 
-###VoiceInn Architecture
+<h3>VoiceInn Architecture</h3>
 Call channels (SIP trunk, PSTN, E1) are connected to asterisk from telecom providers. The calls are asynchronously transferred to adhearsion application through a Asterisk Manager Interface(AMI) connection. Then all the call flows are controlled by adhearsion callcontroller. 
 
 ![VoiceInn Architecture](/images/voiceinn/architecture.jpg)
