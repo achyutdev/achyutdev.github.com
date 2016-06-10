@@ -40,9 +40,9 @@ Asterisk, adhearsion and flask are the major components used to build VoiceInn. 
 <h3>VoiceInn Architecture</h3>
 Call channels (SIP trunk, PSTN, E1) are connected to asterisk from telecom providers. The calls are asynchronously transferred to adhearsion application through a Asterisk Manager Interface(AMI) connection. Then all the call flows are controlled by adhearsion callcontroller. 
 
-![VoiceInn Architecture](/images/voiceinn/architecture.jpg)
+![VoiceInn Architecture](/images/voiceinn/voiceInn.png)
 
-Each call logs and activity logs are stored in MySQL database from asterisk, adhearsion and flask. Open DataBase Connectivity(ODBC) is used to store Call Details Report (CDR) in database from asterisk. Except CDR, all call logs are handled by adhearsion and stored in database. Both telephone system and web interface (Flask) share same database. So any changes from client dashboard directly affects telephone call flow. Beside same database, Some APIs are used to connect application with client web UI. Handler handles all kind of APIs and parse data. This handler is primarily used for originating outbound call from client UI. 
+Each call logs and activity logs are stored in MySQL database from asterisk, adhearsion and SpringMVC. Open DataBase Connectivity(ODBC) is used to store Call Details Report (CDR) in database from asterisk. Except CDR, all call logs are handled by adhearsion and stored in database. Both telephone system and web interface share same database. So any changes from client dashboard directly affects telephone call flow. Beside same database, Some APIs are used to connect application with client web UI. Handler handles all kind of APIs and parse data. This handler is primarily used for originating outbound call from client UI. 
 
 ![Call Handler](/images/voiceinn/handler.jpg)
 
